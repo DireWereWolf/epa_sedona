@@ -6,14 +6,33 @@
 }
 
 .map{
-  min-height: rem(593px);
+  position: relative;
+  height: rem(593px);
   margin-bottom: rem(-120px);
   background-image: url("../images/map.png");
   background-position: 50% 0;
   background-repeat: no-repeat;
 
+  &:before,
+  &:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 6%;
+    height:inherit;
+    z-index: 1;
+    margin-bottom: inherit;
+
+  }
+
+  &:before{
+    left: 0;
+  }
+  &:after{
+    right: 0;
+  }
+
   @include mobile{
-    //min-height: rem(300px);
     background-position: 50%;
     margin-bottom: 0;
   }

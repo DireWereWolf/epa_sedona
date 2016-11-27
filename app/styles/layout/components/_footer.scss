@@ -1,4 +1,5 @@
 .footer{
+  position: relative;
   display: flex;
   min-height: rem(120px);
   background-color: transparentize($white, .1);

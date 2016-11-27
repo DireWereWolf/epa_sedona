@@ -44,19 +44,6 @@ const App = {
       for (let i=0; i < buttons.length; i++){
         buttons[i].addEventListener('click', slideToggle);
       };
-
-
-
-    // document.getElementsByClassName(buttonSelector).onclick = function() {
-    //   return console.log("clicked!");
-    // };
-
-
-    // button.onclick =  function () {
-    //       return console.log("clicked!");
-    //   }
-    // style = document.getElementsByClassName(elem).style;
-    // style.display = (style.display == 'block') ? 'none' : 'block';
   }
 };
 

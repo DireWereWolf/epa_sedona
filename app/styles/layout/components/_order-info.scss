@@ -1,7 +1,9 @@
 .order-info{
+  position: relative;
   min-height: rem(291px);
   background: $white;
   padding-top: rem(55px);
+  z-index: 9999;
 
   @include mobile{
     padding: rem(55px) rem(20px) 0;
@@ -118,7 +120,6 @@
   &__date-btn{
     position: absolute;
     right: 0;
-    top: 0;
     display: block;
     width: rem(38px);
     height: rem(38px);
@@ -141,6 +142,13 @@
     &:focus{
       background-image: url("../images/icons/ic-calendar_blue.png");
       @include transition(background-image .3s);
+    }
+
+    @include mobile{
+      bottom: 0;
+    }
+    @include tablet-min{
+      top: 0;
     }
   }
 }
