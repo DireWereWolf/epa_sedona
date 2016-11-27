@@ -148,16 +148,16 @@
             и мы покажем вам лучшие предложения гостиниц в седоне</div>
           <div class="order-info__form-wrap">
             <div class="order-info__button btn btn_brown">ПОИСК ГОСТИНИЦЫ В седоне</div>
-            <form action="#" class="order-info__form order-form">
+            <form action="#" class="order-info__form order-form js-spoiler-closed">
               <label class="order-form__row">
                 <span class="order-form__input-cap">Дата заезда:</span>
                 <input type="text" class="order-form__input input input_normal">
-                <button class="order-form__date-btn">Date button</button>
+                <span class="order-form__date-btn">Date button</span>
               </label>
               <label class="order-form__row">
                 <span class="order-form__input-cap">Дата выезда</span>
                 <input type="text" class="order-form__input input input_normal">
-                <button class="order-form__date-btn">Date button</button>
+                <span class="order-form__date-btn">Date button</span>
               </label>
               <div class="order-form__row">
                 <label class="order-form__col">
@@ -181,6 +181,41 @@
               </div>
               <button type="submit" class="order-form__button btn btn_blue">Найти</button>
             </form>
+            <noscript>
+              <form action="#" class="order-info__form order-form">
+                <label class="order-form__row">
+                  <span class="order-form__input-cap">Дата заезда:</span>
+                  <input type="text" class="order-form__input input input_normal">
+                  <span class="order-form__date-btn">Date button</span>
+                </label>
+                <label class="order-form__row">
+                  <span class="order-form__input-cap">Дата выезда</span>
+                  <input type="text" class="order-form__input input input_normal">
+                  <span class="order-form__date-btn">Date button</span>
+                </label>
+                <div class="order-form__row">
+                  <label class="order-form__col">
+                    <span class="order-form__input-cap">Взрослые:</span>
+                    <input type="hidden" name="order-adult" value="">
+                    <span class="order-form__counter counter">
+                    <span class="counter__plus">-</span>
+                    <span class="counter__status">0</span>
+                    <span class="counter__minus">+</span>
+                  </span>
+                  </label>
+                  <label class="order-form__col">
+                  <span class="order-form__counter counter">
+                    <span class="counter__plus">-</span>
+                    <span class="counter__status">0</span>
+                    <span class="counter__minus">+</span>
+                  </span>
+                    <span class="order-form__input-cap order-form__input-cap_right">Дети:</span>
+                    <input type="hidden" name="order-kids" value="">
+                  </label>
+                </div>
+                <button type="submit" class="order-form__button btn btn_blue">Найти</button>
+              </form>
+            </noscript>
           </div>
         </div><!--order-info-->
         <!--map-->

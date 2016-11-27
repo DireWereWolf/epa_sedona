@@ -1,0 +1,11 @@
+//spoiler styles
+.js-spoiler-closed{
+  opacity: 0;
+  z-index: -1;
+  @include transition(opacity .5s, z-index .5s);
+}
+.js-spoiler-open{
+  opacity: 1;
+  z-index: 0;
+  @include transition(opacity .5s, z-index .5s);
+}
