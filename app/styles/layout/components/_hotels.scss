@@ -24,6 +24,7 @@
 
 /*Hero section*/
 .hero_hotels{
+  background-color: #779dc2;
   background-image: url("../images/filter-bg.png");
   background-repeat:no-repeat;
   background-position: 50% 0;
@@ -34,6 +35,7 @@
       padding: rem(30px) 6% rem(32px);
       color: $white;
       text-transform: uppercase;
+      overflow: hidden;
     }
 
 
@@ -361,6 +363,7 @@
   &__img{
     display: inline-block;
     vertical-align: top;
+    background-color: #ccc;
 
     @include mobile{
       display: block;
@@ -381,7 +384,6 @@
 
   }
   &__title{
-    margin-bottom: rem(10px);
     display: flex;
     @include font-size(21px);
     @include font-weight($font-bold);
@@ -400,7 +402,6 @@
     order: 2;
     @include mobile{
       max-width: 50%;
-      margin-bottom: rem(5px);
       flex-direction: row;
     }
   }

@@ -7,6 +7,7 @@
       &__wrapper{
         @include outer-container;
         min-height: rem(560px);
+        background-color: #d5e3ec;
         background-image: url("../images/header-bg.png");
         background-repeat:no-repeat;
         background-position: 50% 0;

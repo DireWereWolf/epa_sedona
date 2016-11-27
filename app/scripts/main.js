@@ -1,6 +1,6 @@
 const App = {
   _load: function (funcName) {
-    return document.addEventListener("DOMContentLoaded", funcName);
+    return document.addEventListener('DOMContentLoaded', funcName);
   },
   _hasClass: function (el, className) {
       if (el.classList)
@@ -12,7 +12,7 @@ const App = {
   _addClass: function (el, className) {
     if (el.classList)
       el.classList.add(className)
-    else if (!App._hasClass(el, className)) el.className += " " + className
+    else if (!App._hasClass(el, className)) el.className += ' ' + className
   },
 
   _removeClass: function (el, className) {
@@ -32,12 +32,12 @@ const App = {
       function slideToggle(selector) {
         selector = elem;
 
-        if(App._hasClass(selector, "js-spoiler-closed")){
-          App._removeClass(selector, "js-spoiler-closed");
-          App._addClass(selector, "js-spoiler-open");
+        if(App._hasClass(selector, 'js-spoiler-closed')){
+          App._removeClass(selector, 'js-spoiler-closed');
+          App._addClass(selector, 'js-spoiler-open');
         }else {
-          App._removeClass(selector, "js-spoiler-open");
-          App._addClass(selector, "js-spoiler-closed");
+          App._removeClass(selector, 'js-spoiler-open');
+          App._addClass(selector, 'js-spoiler-closed');
         }
       }
 
@@ -47,7 +47,7 @@ const App = {
   }
 };
 
-App._load(App._spoiler("order-info__button",".order-info__form"));
+App._load(App._spoiler('order-info__button','.order-info__form'));
 
 
 
