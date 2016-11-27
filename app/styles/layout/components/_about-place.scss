@@ -1,0 +1,129 @@
+.about-place{
+  display: flex;
+  min-height: rem(256px);
+  color: $text-secondary;
+  text-align: center;
+
+  @include mobile{
+    flex-wrap: wrap;
+  }
+
+  /*common*/
+  &__img,
+  &__caption{
+    display: flex;
+    flex-direction: column;
+    min-height: inherit;
+  }
+
+  &__title,
+  &__num,
+  &__desc{
+    display: flex;
+    align-self: center;
+  }
+
+  /*spec*/
+  &__img{
+    min-height: inherit;
+  }
+  &__caption{
+    background: $main-color;
+    justify-content: center;
+    padding: 0 rem(50px);
+
+    @include mobile{
+      padding: rem(30px) rem(20px);
+    }
+  }
+
+  &__title{
+    margin-bottom: rem(27px);
+    @include font-size(21px);
+    text-transform: uppercase;
+    @include font-weight($font-bold);
+
+    @include tablet-min{
+      max-width: rem(160px);
+    }
+  }
+  &__num{
+    margin-bottom: rem(28px);
+    @include font-size(14px);
+
+    &:before,&:after{
+      content: '—';
+      display: inline-block;
+      margin: 0 rem(6px);
+    }
+  }
+  &__desc{
+    text-transform: uppercase;
+  }
+
+  &_rtl{
+    .about-place{
+      flex-wrap: wrap;
+
+      @include mobile{
+        flex-direction: column;
+      }
+
+      &__img{
+        background-image: url("../images/pic1.png");
+        background-repeat:no-repeat;
+        background-position: 50% 0;
+        background-size:cover;
+        @include mobile{
+          @include column-width(12);
+          order: 1;
+        }
+        @include tablet-min{
+          @include column-width(8);
+          order: 2;
+        }
+
+
+      }
+      &__caption{
+        @include mobile{
+          @include column-width(12);
+          order: 2;
+        }
+        @include tablet-min{
+          @include column-width(4);
+          order: 1;
+        }
+      }
+    }
+  }
+  &_ltr{
+    .about-place{
+
+      &__img{
+        background-image: url("../images/pic2.png");
+        background-repeat:no-repeat;
+        background-position: 50% 0;
+        background-size:cover;
+        order: 1;
+        @include mobile{
+          @include column-width(12);
+        }
+        @include tablet-min{
+          @include column-width(8);
+        }
+      }
+      &__caption{
+        order: 2;
+        @include mobile{
+          @include column-width(12);
+        }
+        @include tablet-min{
+          @include column-width(4);
+        }
+      }
+    }
+  }
+}
+
+

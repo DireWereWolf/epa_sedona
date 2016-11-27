@@ -1,0 +1,84 @@
+.hero{
+  position: relative;
+
+  /*Hero on main page*/
+  &_main{
+    .hero{
+      &__wrapper{
+        @include outer-container;
+        min-height: rem(560px);
+        background-image: url("../images/header-bg.png");
+        background-repeat:no-repeat;
+        background-position: 50% 0;
+        background-size:cover;
+      }
+
+      &__slogan{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+
+        @include mobile{
+          max-width: 80%;
+        }
+      }
+    }
+  }
+}
+
+.pre-content{
+  position: relative;
+
+  &__wrapper{
+    @include outer-container;
+    min-height: rem(215px);
+    background: $page;
+    padding: rem(60px) 0;
+
+    &:before{
+      content: '';
+      @include outer-container;
+      position: absolute;
+      top: rem(-57px);
+      height: rem(57px);
+      width: 100%;
+      max-width: 100%;
+      background-image: url("../images/header-overlay.png");
+      background-repeat:no-repeat;
+      background-position: 50% 0;
+      background-size:cover;
+
+      @include mobile{
+        left: 0;
+      }
+    }
+
+    @include mobile{
+      padding: rem(30px) rem(20px);
+    }
+
+  }
+
+  &__title,&__desc{
+    max-width: 50%;
+    margin: auto;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include mobile{
+      max-width: 100%;
+    }
+  }
+  &__title{
+    margin-bottom: 30px;
+    @include font-size(21px);
+    @include font-weight($font-bold);
+
+  }
+  &__desc{
+    @include font-size(14px);
+  }
+}

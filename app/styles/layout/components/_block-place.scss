@@ -1,0 +1,288 @@
+.block-place{
+
+  //template of block 1 item inline (full width)
+  //mobile view is img - top, info - bottom
+  &_w-image{
+    /*Common*/
+    display: flex;
+    min-height: rem(256px);
+    color: $text-secondary;
+    text-align: center;
+
+    @include mobile{
+      flex-wrap: wrap;
+    }
+
+    .block-place{
+      /*common*/
+      &__img-wrapper,
+      &__caption{
+        display: flex;
+        flex-direction: column;
+        min-height: inherit;
+      }
+
+      &__title,
+      &__num,
+      &__desc{
+        display: flex;
+        align-self: center;
+      }
+
+      /*spec*/
+      &__img-wrapper{
+        background-color: $white;
+        min-height: inherit;
+        @include mobile{
+          width: 100%;
+          order: 1;
+        }
+      }
+      &__img{
+        display: block;
+        margin: auto;
+      }
+      &__caption{
+        background: $main-color;
+        justify-content: center;
+        padding: 0 rem(50px);
+
+        @include mobile{
+          padding: rem(30px) rem(20px);
+          width: 100%;
+          order: 2;
+        }
+      }
+
+      &__title{
+        margin-bottom: rem(27px);
+        @include font-size(21px);
+        text-transform: uppercase;
+        @include font-weight($font-bold);
+
+        @include tablet-min{
+          max-width: rem(160px);
+        }
+      }
+      &__num{
+        margin-bottom: rem(28px);
+        @include font-size(14px);
+
+        &:before,&:after{
+          content: '—';
+          display: inline-block;
+          margin: 0 rem(6px);
+        }
+      }
+      &__desc{
+        text-transform: uppercase;
+      }
+    }
+    /*Common end*/
+
+    /*Left side - info, right side - image*/
+    &-rtl{
+      .block-place{
+        flex-wrap: wrap;
+
+        @include mobile{
+          flex-direction: column;
+        }
+
+        &__img-wrapper{
+          background-image: url("../images/pic1.png");
+          background-repeat:no-repeat;
+          background-position: 50% 0;
+          background-size:cover;
+          @include mobile{
+            @include column-width(12);
+            order: 1;
+          }
+          @include tablet-min{
+            @include column-width(8);
+            order: 2;
+          }
+        }
+        &__img{
+          visibility: hidden;
+        }
+        &__caption{
+          @include mobile{
+            @include column-width(12);
+            order: 2;
+          }
+          @include tablet-min{
+            @include column-width(4);
+            order: 1;
+          }
+        }
+      }
+    }
+    /*Left side - image, right side - info*/
+    &-ltr{
+      .block-place{
+
+        &__img-wrapper{
+          background-image: url("../images/pic2.png");
+          background-repeat:no-repeat;
+          background-position: 50% 0;
+          background-size:cover;
+          order: 1;
+          @include mobile{
+            @include column-width(12);
+          }
+          @include tablet-min{
+            @include column-width(8);
+          }
+        }
+        &__img{
+          visibility: hidden;
+        }
+        &__caption{
+          order: 2;
+          @include mobile{
+            @include column-width(12);
+          }
+          @include tablet-min{
+            @include column-width(4);
+          }
+        }
+      }
+    }
+  }
+
+  //template of block, where 3 items inline and with icon
+  &_w-icon{
+    display: flex;
+    min-height: rem(330px);
+
+    @include mobile{
+      flex-wrap: wrap;
+      min-height: 0;
+    }
+    .block-place{
+      &__item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+        min-height: inherit;
+        @include column-width(4);
+        text-align: center;
+
+        @include mobile{
+          @include column-width(12);
+        }
+      }
+    }
+  }
+
+  //template of block, where 3 items inline and without images, text only
+  &_txt-only{
+    .block-place{
+      &__items{
+        display: flex;
+        min-height: rem(256px);
+
+        @include mobile{
+          flex-wrap: wrap;
+          min-height: 0;
+        }
+      }
+
+      &__item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+        min-height: inherit;
+        @include column-width(4);
+        text-align: center;
+        padding: 0 rem(50px);
+
+        @include mobile{
+          @include column-width(12);
+          padding: rem(30px) rem(20px);
+        }
+      }
+    }
+  }
+
+}
+
+.item-info{
+  &__desc{
+    word-wrap: break-word;
+  }
+
+  &_w-ico{
+    background: $white;
+    padding: 0 rem(50px);
+    @include mobile{
+      padding:rem(30px) rem(20px);
+    }
+
+    .item-info{
+      &__img,
+      &__caption{
+        display: flex;
+        flex-direction:column;
+        align-self: center;
+      }
+      &__title,
+      &__desc{
+        display: block;
+        width: 100%;
+        text-transform: uppercase;
+      }
+
+      &__img{
+        margin-bottom: rem(30px);
+      }
+      &__caption{
+        min-width: 100%;
+      }
+      &__title{
+        margin-bottom:rem(30px);
+        @include font-size(21px);
+        @include font-weight($font-bold);
+      }
+    }
+  }
+
+  &_txt-only{
+    .item-info{
+      &__title,
+      &__num,
+      &__desc{
+        display: block;
+        width: 100%;
+        text-transform: uppercase;
+      }
+
+      &__title{
+        max-width: rem(130px);
+        margin-bottom: rem(27px);
+        @include font-size(21px);
+        text-transform: uppercase;
+        @include font-weight($font-bold);
+
+      }
+      &__num{
+        margin-bottom: rem(28px);
+        @include font-size(14px);
+
+        &:before,&:after{
+          content: '—';
+          display: inline-block;
+          margin: 0 rem(6px);
+        }
+      }
+      &__desc{
+        text-transform: uppercase;
+      }
+    }
+  }
+}

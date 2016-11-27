@@ -1,0 +1,63 @@
+.benefits{
+
+  &__items{
+    display: flex;
+    min-height: rem(256px);
+
+    @include mobile{
+      flex-wrap: wrap;
+      min-height: 0;
+    }
+  }
+
+  &__item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    min-height: inherit;
+    @include column-width(4);
+    text-align: center;
+    padding: 0 rem(50px);
+
+    @include mobile{
+      @include column-width(12);
+      padding: rem(30px) rem(20px);
+    }
+  }
+}
+
+.benefit{
+
+  &__title,
+  &__num,
+  &__desc{
+    display: block;
+    width: 100%;
+    text-transform: uppercase;
+  }
+
+  &__title{
+    max-width: rem(130px);
+    margin-bottom: rem(27px);
+    @include font-size(21px);
+    text-transform: uppercase;
+    @include font-weight($font-bold);
+
+  }
+  &__num{
+    margin-bottom: rem(28px);
+    @include font-size(14px);
+
+    &:before,&:after{
+      content: '—';
+      display: inline-block;
+      margin: 0 rem(6px);
+    }
+  }
+  &__desc{
+    text-transform: uppercase;
+  }
+}
+

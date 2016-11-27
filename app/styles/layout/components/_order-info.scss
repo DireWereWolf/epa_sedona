@@ -1,0 +1,146 @@
+.order-info{
+  min-height: rem(291px);
+  background: $white;
+  padding-top: rem(55px);
+
+  @include mobile{
+    padding: rem(55px) rem(20px) 0;
+  }
+
+  &__title,
+  &__desc{
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__title{
+    margin-bottom: rem(35px);
+    @include font-size(30px);
+    @include font-weight($font-bold);
+
+    @include mobile{
+      @include font-size(25px);
+    }
+  }
+  &__desc{
+    max-width: rem(500px);
+    margin: 0 auto rem(50px);
+  }
+
+  &__button{
+    height: rem(86px);
+    @include line-height(86px);
+    @include font-size(21px);
+
+    @include mobile{
+      @include font-size(16px)
+    }
+  }
+
+  &__form-wrap{
+    position: relative;
+    max-width: rem(568px);
+    margin: 0 auto;
+  }
+
+  &__form{
+    position: absolute;
+    width: 100%;
+    background: $white;
+    padding: rem(55px);
+    @include mobile{
+      padding: rem(20px);
+    }
+  }
+}
+
+.order-form{
+  //display: none;
+  &__row{
+    position: relative;
+    display: block;
+    margin-bottom: rem(29px);
+    @include line-height(38px);
+    @include font-weight($font-bold);
+    @include clearfix;
+  }
+  &__col{
+    display: block;
+    width: 50%;
+    float: left;
+    @include clearfix;
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+
+    @include mobile{
+      width: 100%;
+      float: none;
+      margin-bottom: rem(20px);
+    }
+  }
+  &__input-cap{
+    float: left;
+    @include line-height(38px);
+    text-transform: uppercase;
+
+    &_right{
+      float: right;
+      margin-right: rem(26px);
+    }
+    @include mobile{
+      float: none;
+    }
+  }
+  &__input{
+    width: 100%;
+    height: rem(38px);
+    max-width: rem(346px);
+    margin-left: auto;
+    margin-right: 0;
+    padding: 0 rem(38px) 0 rem(15px);
+
+    @include mobile{
+      max-width: 100%;
+    }
+  }
+  &__button{
+    width:100%;
+    height: rem(58px);
+    @include font-size(21px);
+    @include line-height(58px);
+    @include font-weight($font-bold);
+  }
+  &__counter{
+    float: right;
+  }
+  &__date-btn{
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    width: rem(38px);
+    height: rem(38px);
+    padding: 0;
+    background-color: transparent;
+    background-image: url("../images/icons/ic-calendar_grey.png");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    text-indent: rem(-9999px);
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    @include transition(background-image .3s);
+
+    &:hover{
+       background-image: url("../images/icons/ic-calendar_black.png");
+      @include transition(background-image .3s);
+     }
+    &:active,
+    &:focus{
+      background-image: url("../images/icons/ic-calendar_blue.png");
+      @include transition(background-image .3s);
+    }
+  }
+}

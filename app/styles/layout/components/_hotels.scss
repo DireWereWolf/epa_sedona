@@ -1,0 +1,465 @@
+.hotels{
+  background: $white;
+
+  &__filter{
+    margin: auto;
+    padding: rem(30px) 6%;
+  }
+
+  &__filter{
+
+  }
+  &__list{
+
+  }
+  &__item{
+    padding: rem(30px) rem(10px);
+    border-bottom: rem(1px) solid #e5e5e5;
+
+    &:first-child{
+      border-top: rem(1px) solid #e5e5e5;
+    }
+  }
+}
+
+/*Hero section*/
+.hero_hotels{
+  background-image: url("../images/filter-bg.png");
+  background-repeat:no-repeat;
+  background-position: 50% 0;
+  min-height: rem(217px);
+
+  .hero{
+    &__wrapper{
+      padding: rem(30px) 6% rem(32px);
+      color: $white;
+      text-transform: uppercase;
+    }
+
+
+
+    &__filter-range{
+      max-width: rem(328px);
+      float: right;
+      @include column-width(6);
+      @include clearfix;
+
+      @include mobile{
+        float: none;
+        @include column-width(12);
+        margin: 0 auto;
+      }
+    }
+  }
+
+}
+
+.hero-filter{
+  &__list-wrapper{
+    float: left;
+    @include column-width(3);
+
+    @include mobile{
+      @include column-width(12);
+      float: none;
+      margin-bottom: rem(20px);
+    }
+  }
+  &__list-title{
+    @include font-size(16px);
+    @include font-weight($font-bold);
+    margin-bottom: rem(25px);
+
+    @include mobile{
+      text-align: center;
+    }
+  }
+  &__list-item{
+    padding-left: rem(40px);
+    margin-bottom: rem(22px);
+    list-style: none;
+    @include line-height(22px);
+    background-image: url("../images/elements/checkbox.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size:rem(22px);
+    cursor: pointer;
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+
+    &_disable{
+      background-image: url("../images/elements/checkbox_disable.png");
+    }
+
+    &_checked{
+      background-image: url("../images/elements/checkbox-checked.png");
+      background-size:rem(26px) rem(22px);
+    }
+    &_checked-disable{
+      background-image: url("../images/elements/checkbox-checked_disable.png");
+      background-size:rem(26px) rem(22px);
+    }
+  }
+  &__label{
+    cursor: inherit;
+  }
+}
+
+.filter-range {
+  &__title{
+      margin-bottom: rem(9px);
+      @include font-size(16px);
+      @include line-height(21px);
+      @include font-weight($font-bold);
+
+      @include mobile{
+        text-align: center;
+      }
+  }
+  &__price-controls {
+    position: relative;
+    height: rem(36px);
+    margin: 0 0 rem(20px) rem(10px);
+    font-size: 0;
+    border: rem(2px) solid #ffffff;
+    border-radius: rem(2px);
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: rem(2px);
+      height: rem(22px);
+      background: $white;
+      transform: translate(-50%, -50%);
+    }
+
+    label {
+      display: inline-block;
+      vertical-align: top;
+      @include line-height(38px);
+      cursor: pointer;
+    }
+
+    input {
+      width: rem(50px);
+      margin: 0;
+      color: inherit;
+      font: inherit;
+      background: none;
+      border: none;
+      outline: 0;
+    }
+
+    .min-price,
+    .max-price {
+      width: 50%;
+      text-align: center;
+      padding-left: rem(25px);
+      @include font-size(14px);
+      @include line-height(30px);
+    }
+  }
+
+  &__controls{
+    position: relative;
+    margin: 0 0 rem(32px) rem(10px);
+
+    .scale {
+      height: rem(2px);
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    .bar {
+      width: 80%;
+      height: rem(2px);
+      text-indent: rem(-9999px);
+
+      background: #ffffff;
+    }
+  }
+
+  &__toggle{
+    position: absolute;
+    top: rem(-9px);
+
+    width: rem(4px);
+    height: rem(4px);
+    padding: rem(2px);
+    background: #ababab;
+    border: rem(8px) solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 rem(2px) rem(1px) 0 rgba(0, 1, 1, 0.2);
+    cursor: pointer;
+    text-indent: rem(-9999px);
+
+    &:hover {
+      background: #1c4f80;
+    }
+
+    &_min {
+      left: 0;
+    }
+    &_max {
+      left: 80%;
+    }
+  }
+
+  &__button{
+    margin: 0 auto;
+    padding: 0 rem(35px);
+    @include line-height(32px);
+    @include font-weight($font-regular);
+  }
+}
+
+/*Hero section end*/
+
+.hotel-prev{
+  padding: 0 6%;
+  margin: 0 auto;
+}
+
+/*Filter styles*/
+.filters-hotel{
+  @include clearfix;
+  &__title{
+    float: left;
+    margin-right: rem(50px);
+    @include font-size(21px);
+    @include font-weight($font-bold);
+  }
+  &__list{
+    display: table;
+    overflow: hidden;
+    font-size: 0;
+
+    @include mobile{
+      display: block;
+      clear: both;
+    }
+  }
+  &__list-title,
+  &__item,
+  &__list-wrapper{
+    display: inline-block;
+    vertical-align: top;
+  }
+  &__list-title,
+  &__item{
+    @include font-size(12px);
+    @include line-height(29px);
+    text-transform: uppercase;
+  }
+  &__list-title{
+    margin-right: rem(40px);
+  }
+  &__item{
+    margin-right: rem(30px);
+    color: #cacaca;
+
+    &:first-child{
+      margin-right: rem(31px);
+    }
+    &:last-child{
+      margin-right: 0;
+    }
+
+    .filters-hotel__link{
+      @include border-style(null null dotted null);
+      @include border-width(null null 1px null);
+      border-color: $main-color;
+    }
+
+    &_active{
+      .filters-hotel__link{
+        color: $main-color;
+        border-bottom-color: transparent;
+
+        &:hover{
+          color: $main-color;
+        }
+      }
+    }
+  }
+  &__link{
+    display: inline-block;
+    color: inherit;
+    line-height: normal;
+    @include transition(color .3s, border-color .3s);
+
+    &:hover{
+      color: $main-color;
+      @include transition(color .3s, border-color .3s);
+    }
+    &:active{
+      color: $black;
+      border-bottom-color: transparent;
+      @include transition(color .3s, border-color .3s);
+    }
+  }
+  &__sort-direction{
+    float: right;
+    @include line-height(29px);
+  }
+}
+
+.sort-direction{
+  font-size: 0;
+  &__up,
+  &__down{
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0;
+    color: #ccc;
+    @include font-size(10px);
+    line-height:normal;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    @include transition(color .3s);
+
+    &_active{
+      color: $main-color;
+    }
+
+    &:hover{
+      color: $main-color;
+      @include transition(color .3s);
+    }
+
+    &:active{
+      color: $black;
+      @include transition(color .3s);
+    }
+  }
+  &__up{
+    margin-right: rem(6px);
+  }
+}
+/*Filter styles end*/
+
+/*Hotels preview styles*/
+.hotel-prev{
+  @include clearfix;
+  &__img-wrapper{
+    float: left;
+    max-width: rem(135px);
+    margin-right: rem(30px);
+
+    @include mobile{
+      float: none;
+      max-width: 100%;
+      margin-right: 0;
+      margin-bottom: rem(10px);
+    }
+  }
+  &__img{
+    display: inline-block;
+    vertical-align: top;
+
+    @include mobile{
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  &__info,
+  &__title,
+  &__stars,
+  &__additional-info,
+  &__rate,
+  &__buttons{
+    display: flex;
+  }
+  &__info{
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+  }
+  &__title{
+    margin-bottom: rem(10px);
+    display: flex;
+    @include font-size(21px);
+    @include font-weight($font-bold);
+    order: 1;
+    word-wrap: break-word;
+
+    @include mobile{
+      width: 100%;
+      margin-bottom: rem(5px);
+    }
+  }
+  &__stars{
+    margin-bottom: rem(10px);
+    font-size:0;
+    align-items:center;
+    order: 2;
+    @include mobile{
+      max-width: 50%;
+      margin-bottom: rem(5px);
+      flex-direction: row;
+    }
+  }
+  &__star{
+    display: inline-block;
+    vertical-align: middle;
+    width: rem(18px);
+    height: rem(17px);
+    margin-left: rem(6px);
+    &:first-child{
+      margin-left: 0;
+    }
+  }
+  &__additional-info{
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: rem(15px);
+    flex-wrap: wrap;
+    order: 3;
+    text-transform: uppercase;
+
+    @include mobile{
+      align-items: center;
+      order: 4;
+    }
+  }
+  &__type{
+    margin-right: rem(39px);
+  }
+  &__rate{
+    color: #666666;
+    background-color: $white-var-1;
+    padding:0 rem(16px);
+    @include line-height(27px);
+    order: 5;
+
+    @include mobile{
+      margin-bottom: rem(5px);
+      order: 3;
+    }
+  }
+  &__buttons{
+    flex-wrap: wrap;
+    order: 4;
+
+    @include mobile{
+      width: 100%;
+      justify-content: space-around;
+      order: 5;
+    }
+  }
+  &__button{
+    padding:0 rem(16px);
+    @include line-height(27px);
+    margin-right: rem(6px);
+
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+}
+/*Hotels preview styles end*/

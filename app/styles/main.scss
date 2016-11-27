@@ -1,0 +1,15 @@
+//libs
+@import "./bower_components/neat/app/assets/stylesheets/_neat.scss";
+@import "./bower_components/bourbon/app/assets/stylesheets/_bourbon.scss";
+
+//Utils (mixins, vars)
+@import "utils/utils";
+
+//Base styles (tags only)
+@import "base/base";
+
+//Layout (grid, components, service classes/selectors)
+@import "layout/layout";
+
+//Modules(popups, sliders, etc.)
+@import "modules/modules";
