@@ -1,6 +1,6 @@
 ## Getting Started
 
-- Install dependencies: `npm install --global yo gulp-cli bower`
+- Install dependencies: `npm install --global gulp-cli bower`
 
 ## Project setup
 - Run `npm i && bower i`
